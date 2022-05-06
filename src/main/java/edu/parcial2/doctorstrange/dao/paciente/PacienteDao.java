@@ -1,4 +1,4 @@
-package edu.parcial2.doctorstrange.dao;
+package edu.parcial2.doctorstrange.dao.paciente;
 
 import edu.parcial2.doctorstrange.entities.Paciente;
 import org.springframework.data.repository.CrudRepository;

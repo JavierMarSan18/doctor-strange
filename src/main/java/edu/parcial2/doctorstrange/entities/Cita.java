@@ -16,27 +16,28 @@ public class Cita {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_cita")
     private Long id;
+    @OneToOne(cascade = {CascadeType.ALL})
+    @JoinColumn(name = "id_poliza")
+    private Poliza poliza;
     @Column(name = "fecha_cita")
-    private Date fecha;
+    private String fecha;
     @Column(name = "hora_cita")
-    private Time hora;
-//    @ManyToOne
-//    @JoinColumn(name = "id_poliza")
-    @Column(name = "poliza_cita")
-    private String poliza;
-    @Column(name = "observaciones_cita")
-    private String observaciones;
+    private String hora;
+    @Column(name = "estado_cita")
+    private String estado;
+    @Column(name = "observacion_cita")
+    private String observacion;
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Cita cita = (Cita) o;
-        return Objects.equals(id, cita.id) && Objects.equals(fecha, cita.fecha) && Objects.equals(hora, cita.hora) && Objects.equals(poliza, cita.poliza) && Objects.equals(observaciones, cita.observaciones);
+        return Objects.equals(id, cita.id) && Objects.equals(fecha, cita.fecha) && Objects.equals(hora, cita.hora) && Objects.equals(poliza, cita.poliza) && Objects.equals(estado, cita.estado) && Objects.equals(observacion, cita.observacion);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, fecha, hora, poliza, observaciones);
+        return Objects.hash(id, fecha, hora, poliza, estado, observacion);
     }
 }

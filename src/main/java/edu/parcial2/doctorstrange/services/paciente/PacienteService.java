@@ -1,4 +1,4 @@
-package edu.parcial2.doctorstrange.services;
+package edu.parcial2.doctorstrange.services.paciente;
 
 import edu.parcial2.doctorstrange.entities.Paciente;
 

@@ -1,7 +1,7 @@
-package edu.parcial2.doctorstrange.services;
+package edu.parcial2.doctorstrange.services.paciente;
 
 
-import edu.parcial2.doctorstrange.dao.PacienteDao;
+import edu.parcial2.doctorstrange.dao.paciente.PacienteDao;
 import edu.parcial2.doctorstrange.entities.Paciente;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

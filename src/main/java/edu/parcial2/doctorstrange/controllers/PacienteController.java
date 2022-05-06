@@ -1,7 +1,7 @@
 package edu.parcial2.doctorstrange.controllers;
 
 import edu.parcial2.doctorstrange.entities.Paciente;
-import edu.parcial2.doctorstrange.services.PacienteService;
+import edu.parcial2.doctorstrange.services.paciente.PacienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

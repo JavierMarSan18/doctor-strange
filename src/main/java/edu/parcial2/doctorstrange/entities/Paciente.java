@@ -2,6 +2,7 @@ package edu.parcial2.doctorstrange.entities;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 import org.hibernate.Hibernate;
 
 import javax.persistence.*;
@@ -10,6 +11,7 @@ import java.util.Objects;
 @Entity
 @Table(name = "pacientes")
 @Getter @Setter
+@ToString
 public class Paciente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
