@@ -5,6 +5,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.sql.Date;
 import java.util.Objects;
 
 @Entity
@@ -16,15 +17,15 @@ public class Poliza {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_poliza")
     private Long id;
-    @OneToOne(cascade = {CascadeType.ALL})
+    @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REFRESH})
     @JoinColumn(name = "id_paciente")
     private Paciente paciente;
     @Column(name = "estado_poliza")
     private String estado;
     @Column(name = "fecha_inicio_poliza")
-    private String fechaInicio;
+    private Date fechaInicio;
     @Column(name = "fecha_fin_poliza")
-    private String fechaFin;
+    private Date fechaFin;
 
     @Override
     public boolean equals(Object o) {

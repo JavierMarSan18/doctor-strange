@@ -16,13 +16,13 @@ public class Cita {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_cita")
     private Long id;
-    @OneToOne(cascade = {CascadeType.ALL})
+    @ManyToOne(cascade = {CascadeType.PERSIST,CascadeType.REFRESH})
     @JoinColumn(name = "id_poliza")
     private Poliza poliza;
     @Column(name = "fecha_cita")
-    private String fecha;
+    private Date fecha;
     @Column(name = "hora_cita")
-    private String hora;
+    private Time hora;
     @Column(name = "estado_cita")
     private String estado;
     @Column(name = "observacion_cita")
