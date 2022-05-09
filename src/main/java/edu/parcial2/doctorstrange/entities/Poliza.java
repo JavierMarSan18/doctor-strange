@@ -3,7 +3,6 @@ package edu.parcial2.doctorstrange.entities;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import org.springframework.lang.Nullable;
 
 import javax.persistence.*;
 import java.sql.Date;

@@ -25,8 +25,10 @@ public class CitaServiceImpl implements CitaService {
 
     @Override
     public void crearCita(Cita cita) {
-        cita.setEstado("PENDIENTE");
-        citaDao.save(cita);
+        if(!citaDao.existsById(cita.getId())){
+            cita.setEstado("PENDIENTE");
+            citaDao.save(cita);
+        }
     }
 
     @Override
