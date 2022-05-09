@@ -2,6 +2,7 @@ package edu.parcial2.doctorstrange.entities;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.lang.Nullable;
 
 import javax.persistence.*;
 import java.sql.Date;
@@ -16,7 +17,7 @@ public class Cita {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_cita")
     private Long id;
-    @ManyToOne(cascade = {CascadeType.PERSIST,CascadeType.REFRESH})
+    @ManyToOne(cascade = {CascadeType.PERSIST})
     @JoinColumn(name = "id_poliza")
     private Poliza poliza;
     @Column(name = "fecha_cita")

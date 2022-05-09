@@ -3,6 +3,7 @@ package edu.parcial2.doctorstrange.entities;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.springframework.lang.Nullable;
 
 import javax.persistence.*;
 import java.sql.Date;
@@ -17,8 +18,8 @@ public class Poliza {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_poliza")
     private Long id;
-    @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REFRESH})
-    @JoinColumn(name = "id_paciente")
+    @ManyToOne(cascade ={CascadeType.PERSIST})
+    @JoinColumn(name = "id_cliente")
     private Paciente paciente;
     @Column(name = "estado_poliza")
     private String estado;
