@@ -10,5 +10,3 @@ insert into polizas (id_paciente,estado_poliza, fecha_inicio_poliza,fecha_fin_po
 insert into citas (id_poliza, fecha_cita, hora_cita, estado_cita, observacion_cita) values (1,'2022-08-10', '15:00:00', 'PENDIENTE', 'El paciente muestra mejoria.');
 --insert into citas (id_poliza, fecha_cita, hora_cita, estado_cita, observacion_cita) values (2,'2022-05-26', '15:00:00', 'CANCELADA', 'Aumentar duracion de la cita.');
 --insert into citas (id_poliza, fecha_cita, hora_cita, estado_cita, observacion_cita) values (3,'2022-11-02', '15:00:00', 'ACEPTADA', 'Cambiar el metodo de tratamiento.');
-
---insert into patient (primer_nombre_paciente, segundo_nombre_paciente, primer_apellido_paciente,segundo_apellido_paciente,edad_paciente) values ('Jose', 'Javier', 'Marroquin','Sanchez',20);
