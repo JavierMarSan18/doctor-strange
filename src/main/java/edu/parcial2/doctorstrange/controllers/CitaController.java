@@ -34,6 +34,7 @@ public class CitaController {
     }
 
     @PutMapping("/{id}")
+    @ResponseStatus(HttpStatus.ACCEPTED)
     public void modificarCita(@PathVariable Long id, @RequestBody Cita cita){
         citaService.modificarCita(id,cita);
     }
