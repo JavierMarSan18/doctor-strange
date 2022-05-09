@@ -17,25 +17,25 @@ public class PacienteController {
 
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
-    public List<Paciente> listar(){
-        return pacienteService.listar();
+    public List<Paciente> listarPacientes(){
+        return pacienteService.listarPacientes();
     }
 
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public Paciente buscar(@PathVariable Long id){
-        return pacienteService.buscar(id);
+    public Paciente buscarPaciente(@PathVariable Long id){
+        return pacienteService.buscarPaciente(id);
     }
 
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.ACCEPTED)
-    public void editar(@PathVariable Long id, @RequestBody Paciente paciente){
-        pacienteService.editar(id,paciente);
+    public void modificarPaciente(@PathVariable Long id, @RequestBody Paciente paciente){
+        pacienteService.modificarPaciente(id,paciente);
     }
 
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.ACCEPTED)
-    public void borrar(@PathVariable Long id){
-        pacienteService.borrar(id);
+    public void borrarPaciente(@PathVariable Long id){
+        pacienteService.eliminarPaciente(id);
     }
 }

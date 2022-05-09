@@ -15,16 +15,16 @@ public class PacienteServiceImpl implements PacienteService{
     private PacienteDao pacienteDao;
 
    @Override
-    public List<Paciente> listar(){
+    public List<Paciente> listarPacientes(){
         return (List<Paciente>) pacienteDao.findAll();
     }
     @Override
-    public Paciente buscar(Long id){
+    public Paciente buscarPaciente(Long id){
         return pacienteDao.findById(id).orElse(null);
     }
 
     @Override
-    public void editar(Long id, Paciente paciente) {
+    public void modificarPaciente(Long id, Paciente paciente) {
         if (pacienteDao.existsById(id)){
             paciente.setId(id);
             pacienteDao.save(paciente);
@@ -32,7 +32,7 @@ public class PacienteServiceImpl implements PacienteService{
     }
 
     @Override
-    public void borrar(Long id) {
+    public void eliminarPaciente(Long id) {
         if(pacienteDao.existsById(id)){
             pacienteDao.deleteById(id);
         }

@@ -5,8 +5,8 @@ import edu.parcial2.doctorstrange.entities.Paciente;
 import java.util.List;
 
 public interface PacienteService {
-    List<Paciente> listar();
-    Paciente buscar(Long id);
-    void editar(Long id, Paciente paciente);
-    void borrar(Long id);
+    List<Paciente> listarPacientes();
+    Paciente buscarPaciente(Long id);
+    void modificarPaciente(Long id, Paciente paciente);
+    void eliminarPaciente(Long id);
 }

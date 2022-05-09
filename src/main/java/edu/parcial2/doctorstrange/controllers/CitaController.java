@@ -33,10 +33,16 @@ public class CitaController {
         citaService.crearCita(cita);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/{id}/aceptar")
     @ResponseStatus(HttpStatus.ACCEPTED)
-    public void modificarCita(@PathVariable Long id, @RequestBody Cita cita){
-        citaService.modificarCita(id, cita);
+    public void aceptarCita(@PathVariable Long id){
+        citaService.modificarCita(id, "ACEPTADA");
+    }
+
+    @PutMapping("/{id}/cancelar")
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    public void calcelarCita(@PathVariable Long id){
+        citaService.modificarCita(id,"CANCELADA");
     }
 
     @DeleteMapping("/{id}")
